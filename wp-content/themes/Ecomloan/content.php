@@ -6,6 +6,7 @@
 		</a>
 	</div>
 	<?php endif; ?>
+
 	<div class="post-content<?php if ( $num != 0 ) echo ' post-inner'; ?>">
 		<div class="box">
 			<div class="title-box"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a></div>

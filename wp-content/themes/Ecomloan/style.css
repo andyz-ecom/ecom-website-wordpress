@@ -103,7 +103,7 @@ html[xmlns] .slides {display: block;}
 .logo a img { vertical-align: middle; }
 .menu { float: right; margin-top: 30px; }
 .menu ul { float: left; }
-.menu li { float: left; max-width: 100%; padding: 0 12px; margin-bottom: 10px; height: 16px; line-height: 1; border-left: 2px solid #222; }
+.menu li { float: left; max-width: 100%; padding: 0 12px; margin-bottom: 10px; height: 16px; line-height: 1; border-left: 1px solid #222; }
 .menu li:first-child { border: 0; }
 .menu li a { display: inline-block; font-size: 16px; color: #222; } 
 .menu li a i { display: none; }
@@ -130,13 +130,14 @@ html[xmlns] .slides {display: block;}
 .news-list { width: 100%; border-radius: 5px; overflow: hidden; background: #FFF; box-shadow: 0 1px 2px rgba(0,0,0,.3); }
 .news-list .news-img { display: block; }
 .news-list .news-img img { width: 100%; }
-.news-list .news-info { height: 202px; padding: 30px 20px; text-align: center; }
+.news-list .news-info { height: 180px; padding: 20px 20px; text-align: center; }
 .news-list .news-info h2 a { display: block; width: 100%; font-size: 16px; color: #004986; font-weight: 600; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: left; }
 .news-list .news-info p { margin-top: 15px; font-size: 16px; line-height: 25px; color: #666; text-align: left; }
-.news-list .news-info .more { display: inline-block; padding: 6px 25px; background: #004986; color: #FFF; font-size: 16px; border-radius: 3px; margin: 5px auto; }
+.news-list .news-info .more { display: inline-block; font-size: 16px; float: right;  color: #004986;margin-top: 30px;}
 .news-list .news-info ul { margin-left: 15px; }
 .news-list .news-info li { list-style: disc; margin-bottom: 10px; }
-.news-list .news-info li a { display: block; width: 100%; font-size: 16px; color: #004986; font-weight: 600; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: left; }
+.news-list .news-info li a { display: block; width: 100%; font-size: 17px; color: #004986; overflow: hidden; text-overflow: ellipsis; text-align: left; }
+.news-list .news-info li a:hover{text-decoration: underline;}
 .team { padding: 35px 0; overflow: hidden; background: #FFF; border-top: 1px solid #ddd; }
 .team-list { position: relative; }
 .team-list .team-box { margin: 0 auto; width: 80% }
@@ -168,20 +169,23 @@ html[xmlns] .slides {display: block;}
 .panes-body { display: block; font-size: 15px; line-height: 25px; padding:15px; }
 .panes-body li{list-style-type: disc;list-style-position: outside;margin-left: 15px;  }
 .related, .offer { padding: 30px 0; overflow: hidden; border-top: 1px solid #ddd; }
-.offer { border-bottom: 2px solid #333; }
+.offer { border-bottom: 1px solid #ddd; }
 
+.sidebar-title{font-size: 22px;
+    padding: 15px 0;
+    text-align: center;}
 .sep-line{border-bottom: 1px solid #eee; width: 60%;}
-
+.sep-line2{border-bottom: 1px solid #004986; width: 90%;}
 /** posts */
-.post { margin-top: 120px; padding: 30px 0; }
+.post {  padding: 30px 0; background-color: #f0f2f5;margin-top: 100px;}
 .post-head { overflow: hidden; }
 .post-head img { width: 100%; }
-.post-content { margin-top: 30px; overflow: hidden; }
+.post-content {   background-color: #fff; padding: 30px;     border: 1px solid #ebebeb;}
 .post-content h1 { font-size: 26px; border-bottom: 1px solid #004986; padding: 15px 0; text-align: center; }
 .post-meta { text-align: center; }
-.post-meta span, .post-meta a { display: inline-block; line-height: 30px; font-size: 14px; color: #888; }
+.post-meta span, .post-meta a { display: inline-block; line-height: 30px; font-size: 14px; color: #111; }
 .post-article { padding: 20px 0; font-size: 16px;  }
-.post-article p { margin-bottom: 15px; } 
+.post-article p { margin-bottom: 15px;line-height: 30px;}
 .post-article img { margin-bottom: 15px; max-width: 100%; height: auto; }
 .post-list { overflow: hidden; }
 .post-list .post-info { padding: 15px; font-size: 18px; border-bottom: 1px solid #EEE; background: url("./img/pdf.jpg") no-repeat right;
@@ -190,7 +194,8 @@ background-size: 50px; }
 
 
 /** sidebar */
-.sidebar { margin-top: 30px; }
+.sidebar {    }
+.sidebar_context{ background-color: #fff;  padding: 30px;  border: 1px solid #ebebeb; font-size:16px;}
 .widget { margin-bottom: 30px; overflow: hidden; }
 .widget-title { padding: 8px 0 5px 0; font-size: 24px; border-bottom: 1px solid #004986; color: #004986; }
 .widget_nav_menu .menu { display: block; width: 100%; margin: 0; float: left; padding: 10px 0; }

@@ -76,7 +76,7 @@
 					</div>
 					<h3 class="panes-head current">什么是贷款经纪？<i class="fa fa-angle-down"></i></h3>
 					<div style="display: none;" class="panes-body">贷款经纪（Mortgage Broker），其实就是借款人与贷款机构连接与沟通的桥梁，他们将借款人介绍给银行但并不参与借贷。贷款经纪还能运用自己专业的背景和经验替借款人处理各种申请文件以及和贷款机构沟通审批程序中的环节，一一化解审批程序中的障碍。由于他们熟悉来自不同房贷机构的贷款产品，就能够快速地帮借款人找到符合需求的且条件最优惠的贷款组合产品。</div>
-					<h3 class="panes-head">申请贷款会需要看我哪些条件？<i class="fa fa-angle-down"></i></h3>
+					<h3 class="panes-head">申请时需要审查申请人的哪些条件？<i class="fa fa-angle-down"></i></h3>
 					<div style="display: none;" class="panes-body"><p>当您提交贷款申请，我们通常会从四个不同方面审核</p>
 					<ul>
 						<li><b>收入</b>&nbsp;您是否有可持续的，稳定的收入来支付贷款月供是审核的主要条件之一。收入可以有多种来源，比如来自于您的薪水，加班，奖金等。其他种类的收入也可以被考虑，只要可以被证明是稳定的，持续的（通常连续三年以上）就可以被计算在内。举例：退休金，残疾人补贴，租金收入和投资收入。</li>

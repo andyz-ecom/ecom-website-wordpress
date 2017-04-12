@@ -129,56 +129,10 @@ include('inc/mode1.php'); //幻灯
 include('inc/mode2.php'); //资讯
 include('inc/mode3.php'); //团队
 include('inc/mode4.php'); //资料
+include('inc/mode6.php'); //三个新闻板块
 ?>
-<div class="related">
-	<div class="container">
-		<div class="col-lg-4">
-			<div class="news-list">
-				<?php $cat=get_category_by_slug($video); //获取分类别名为 wordpress 的分类数据  
-				$cat_links=get_category_link($cat->term_id); ?>
-				<a class="news-img" href="<?php echo $cat_links; ?>"><img src="<?php bloginfo('template_url');?>/img/ads_play.png"/></a>
-				<div class="news-info">
-					<ul>
-						<?php 				
-						$querys = new WP_Query(array('posts_per_page' => 4, 'category_name' => $video));
-						if ( $querys->have_posts() ) : while ($querys->have_posts()) : $querys->the_post(); ?>
-						<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-						<?php endwhile; endif; wp_reset_query();?>
-					</ul>
-					<a class="more" href="<?php echo $cat_links; ?>">more</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg-4">
-			<?php 
-			$querys = new WP_Query(array('posts_per_page' => 1, 'category_name' => $company));
-			if ( $querys->have_posts() ) : while ($querys->have_posts()) : $querys->the_post(); ?>
-			<div class="news-list">
-				<a class="news-img" href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_url');?>/img/news.png"/></a>
-				<div class="news-info">
-					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<p><?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 55,"..."); ?></p>
-					<a class="more" href="<?php the_permalink(); ?>">more</a>
-				</div>
-			</div>
-			<?php endwhile; endif; wp_reset_query();?>
-		</div>
-		<div class="col-lg-4">
-			<?php 
-			$querys = new WP_Query(array('posts_per_page' => 1, 'category_name' => $industry));
-			if ( $querys->have_posts() ) : while ($querys->have_posts()) : $querys->the_post(); ?>
-			<div class="news-list">
-				<a class="news-img" href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_url');?>/img/market.png"/></a>
-				<div class="news-info">
-					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<p><?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 55,"..."); ?></p>
-					<a class="more" href="<?php the_permalink(); ?>">more</a>
-				</div>
-			</div>
-			<?php endwhile; endif; wp_reset_query();?>
-		</div>
-	</div>
-</div>
+
+
 <div class="offer">
 	<div class="container">
 		<div class="col-lg-5 col-lg-offset-1"><iframe src="http://www.mortgagecalculator.org/rates-widgets/mortgages/widget.php?range=6&amp;width=460&amp;height=225&amp;data=30yr_fr|15yr_fr|5yr_ar" style="border: 0; width: 100%; height: 225px;" scrolling="no"></iframe></div>

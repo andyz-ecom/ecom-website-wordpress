@@ -50,13 +50,14 @@ elseif (is_404()) :
 </head>
 <body>
 <div class="header">
-	<div class="lang-box"><div class="container"><a class="en" href="http://wtong.vensey.com/en/">English</a><a class="zh-cn" href="http://wtong.vensey.com/zh/">简</a><a class="zh-tw" href="http://wtong.vensey.com/tw/">繁</a></div></div>
+	<div class="lang-box"><div class="container"><a class="en" href="#">English</a><a class="zh-cn" href="#">简</a><a class="zh-tw" href="#">繁</a></div></div>
 	<div class="nav">
 		<div class="container">
 			<div class="logo"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php bloginfo('template_url');?>/img/logo.png"/></a></div>
 			<div class="menu">
 				<ul><?php echo strip_tags(wp_nav_menu( array( 'container' => false,'items_wrap' => '%3$s','depth' => 1,'theme_location' =>'primary')), '<li><a>' ); ?></ul>
-				<a class="lang" href="javascript:;"><i class="fa fa-reorder"></i></a>
+				&nbsp;CALL:800.709.9635&nbsp;<a class="lang" href="javascript:;"><i class="fa fa-reorder"></i></a>
+
 			</div>
 			<a class="mobile-menu" href="javascript:;"><i class="fa fa-reorder"></i></a>	
 		</div>

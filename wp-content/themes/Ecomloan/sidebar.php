@@ -1,30 +1,25 @@
-<div class="sidebar col-lg-3">
-	<?php
-$lang = get_bloginfo('language'); 
+<?php
+$lang = get_bloginfo('language');
 if( $lang == "zh-TW" ) {
-	if (is_active_sidebar('sidebar-4') && is_single()) {
-	    dynamic_sidebar('sidebar-4');
-	} elseif(is_active_sidebar('sidebar-5') && is_page()){
-		dynamic_sidebar('sidebar-5');
-	} else {
-		dynamic_sidebar('sidebar-6');
-	}
+    $video = "video-tw";
 } elseif( $lang == "en-US" ) {
-	if (is_active_sidebar('sidebar-7') && is_single()) {
-	    dynamic_sidebar('sidebar-7');
-	} elseif(is_active_sidebar('sidebar-8') && is_page()){
-		dynamic_sidebar('sidebar-8');
-	} else {
-		dynamic_sidebar('sidebar-9');
-	}
-} else{	
-	if (is_active_sidebar('sidebar-1') && is_single()) {
-	    dynamic_sidebar('sidebar-1');
-	} elseif(is_active_sidebar('sidebar-2') && is_page()){
-		dynamic_sidebar('sidebar-2');
-	} else {
-		dynamic_sidebar('sidebar-3');
-	}
+    $video = "video-en";
+} else{
+    $video = "video";
 }
-	?>
+?>
+
+<div class="sidebar col-lg-3">
+<div class="sidebar_context">
+    <span class="sidebar-title">其他新闻</span>
+    <div class="sep-line2"></div>
+    <ul class="sidebar-list">
+        <?php
+        $querys = new WP_Query(array('posts_per_page' => 5, 'category_name' => $video));
+        if ( $querys->have_posts() ) : while ($querys->have_posts()) : $querys->the_post(); ?>
+            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+        <?php endwhile; endif; wp_reset_query();?>
+    </ul>
+</div>
+
 </div>
